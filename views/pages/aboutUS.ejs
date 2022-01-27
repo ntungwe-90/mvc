@@ -1,0 +1,76 @@
+<div class="aboutcontainer">
+    <h1><span style="font-size: 50px; color:rgb(29, 208, 231);">A</span>bout Us</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ex ducimus,
+      culpa blanditiis possimus officia ratione adipisci repellendus suscipit,
+      distinctio id mollitia illum similique nam excepturi odio consequatur quo hic.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur,
+      quaerat ullam voluptates facilis explicabo quia asperiores facere eius non obcaecati,
+      nemo minima recusandae inventore ipsam neque similique consequuntur dolore quam!
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam ex ducimus,
+      culpa blanditiis possimus officia ratione adipisci repellendus suscipit,
+      distinctio id mollitia illum similique nam excepturi odio consequatur quo hic.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+
+    <button class="button3">read more</button>
+
+    <h2>Meet Our Team</h2>
+
+    <!-- <div class="imgs">
+<img src="img/blackgirl.jpg">
+ <img src="img/blk5.jpg">
+<img src="img/bgirl2.jpg">
+</div> -->
+
+
+  </div>
+  <div class="teamcontainer">
+    <div class="card2">
+      <img src="img/blackgirl.jpg">
+      <p>mensah kay</p>
+      <p>C.E.O</p>
+      
+    </div>
+
+    <div class="card2">
+      <img src="img/blk5.jpg">
+      <p>Beltha Nsekpa</p>
+      <p>Manager</p>
+     
+    </div>
+
+    <div class="card2">
+      <img src="img/bgirl2.jpg">
+      <p>Asiamah comfort</p>
+      <p>cordinator</p>
+      <ul class="socils">
+       
+    </div>
+  </div>
+
+  <div class="newfeedback">
+    <h2> Feedbacks From Our Customers</h2>
+  </div>
+
+  <div class="commentContainer">
+    <% if(typeof comments !="undefined"){ %>
+     <% comments.forEach((comment) =>{ %>
+      <p>name:<%- comment.name -%> </p>
+      <p>email:<%- comment.email -%> </p>
+      <p>comment:<%- comment.comment -%> </p>
+
+    <% }) %> 
+   <% } %> 
+
+  
+  </div>
+
+<style>
+  .commentContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+</style>

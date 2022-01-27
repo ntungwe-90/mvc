@@ -1,0 +1,30 @@
+<div class="allMenu">
+<h1>we display  everything the menus</h1>
+
+
+   
+
+
+
+<% menus.forEach((menu) =>{ %>
+    <%- menu.name -%>
+    <%- menu.price -%>
+    <%- menu.status -%>
+    <%- menu.remarks -%>
+
+    <ul>
+        <li><a style="color: green;" href="/menus/add">Add </a></li>
+        <li><a style="color: green;" href="/menus/add">Edit </a></li>
+        <li><a style="color: red;" href="/menus/delete">Delete</a></li>
+    </ul>
+
+<%})%> 
+
+
+</div>
+
+<style>
+    .allMenu{
+        margin-top: 5em;
+    }
+</style>

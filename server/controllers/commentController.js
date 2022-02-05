@@ -19,5 +19,11 @@ exports.save = async(req, res) =>{
     })
     console.log(comment)
     await comment.save()
-    res.redirect(302,"/aboutUS")
+    res.redirect("/aboutUS")
+}
+
+exports.edit=async(req, res) => {
+  let id = req.params.id;
+  const comment = await Comment.findById(id)
+  res.render("comments/edit", {comment})
 }

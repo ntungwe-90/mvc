@@ -12,13 +12,18 @@
                 <p class="menu_item">Status : <%-menu.status %></p>
                 <p class="menu_item">remarks : <%-menu.remarks %></p>
          
-                
+                <div class="dropdown">
+                    <button class="dropbtn">
+                      <i class="bi bi-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
                         <a href="/menus/add"  class="menu_link" >Add</a>
                 <a href="/menus/edit/<%=menu._id %>"   class="menu_link" style="color: green;" >Edit</a>
                 <a href="/menus/delete/<%=menu._id %>"  class="menu_link" style="color: red;">Delete</a> 
                 <a href="/orders/add/<%=menu._id %>"  class="menu_link" style="color: blue;">Order</a>
                   </div>
 
+            </div>
                     </div>
            
                 <% }) %>

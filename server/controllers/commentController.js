@@ -3,12 +3,13 @@ const Comment = require("../models/comment")
 
 
 exports.index = async(req, res) =>{
- res.render("comments/index", {title:"comment"})
+  const comment = await Comment.find({});
+ res.render("comments/index", {title:"comment", comment})
 }
 
-exports.add = async(req, res) =>{
-    res.render("comments/add",{title:" add comment"})
-}
+// exports.add = async(req, res) =>{
+//     res.render("comments/add",{title:" add comment"})
+// }
 
 exports.save = async(req, res) =>{
     const comment =new Comment({
@@ -16,7 +17,7 @@ exports.save = async(req, res) =>{
        email:req.body.email,
        comment:req.body.comment 
     })
+    console.log(comment)
     await comment.save()
-    console.log('comment')
     res.redirect(302,"/aboutUS")
 }

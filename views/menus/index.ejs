@@ -1,30 +1,42 @@
-<div class="allMenu">
-<h1>we display  everything the menus</h1>
+<div class="menu">
+    <div class="menu-header">
+        <p class="menu_head">OUR MENU </p>
+    
+    <div class="list_menu">
+        <div class="menu_data">
+                <% if (typeof menus != 'undefined'){  %> 
+                    <%	menus.forEach((menu) =>{ %>
+                    <div id="card_menu">
+                <p class="menu_item"> Menu : <%-menu.name %></p>
+                <p class="menu_item">Price : <%- menu.price %></p>
+                <p class="menu_item">Status : <%-menu.status %></p>
+                <p class="menu_item">remarks : <%-menu.remarks %></p>
+         
+                
+                        <a href="/menus/add"  class="menu_link" >Add</a>
+                <a href="/menus/edit/<%=menu._id %>"   class="menu_link" style="color: green;" >Edit</a>
+                <a href="/menus/delete/<%=menu._id %>"  class="menu_link" style="color: red;">Delete</a> 
+                <a href="/orders/add/<%=menu._id %>"  class="menu_link" style="color: blue;">Order</a>
+                  </div>
+
+                    </div>
+           
+                <% }) %>
+                <%}%>
+            </div>
+        </div>
+        </div>
+    </div>
 
 
-   
 
 
 
-<% menus.forEach((menu) =>{ %>
-    <%- menu.name -%>
-    <%- menu.price -%>
-    <%- menu.status -%>
-    <%- menu.remarks -%>
-
-    <ul>
-        <li><a style="color: green;" href="/menus/add">Add </a></li>
-        <li><a style="color: green;" href="/menus/add">Edit </a></li>
-        <li><a style="color: red;" href="/menus/delete">Delete</a></li>
-    </ul>
-
-<%})%> 
-
-
-</div>
-
-<style>
-    .allMenu{
-        margin-top: 5em;
-    }
-</style>
+    <style>
+.menu{
+    color: black;
+}
+        h1{
+            color: black;
+        }
+    </style>

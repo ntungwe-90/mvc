@@ -1,0 +1,88 @@
+
+    <div class="fcontainer">
+      <h3>Edit menu</h3>
+      <form class="layout" action="" method="post">
+        <!-- <input type="hidden" id="_id" name="_id" placeholder="status" required> -->
+        <input type="text" value="<%= menu.name %>" name="name" id="name" placeholder=" name" required>
+        <input type="number" value="<%= menu.price%>" name="price" id="price" placeholder=" price" required>
+        <!-- <input type="number" value="<%= menu.status%>" name="status" class="name" placeholder=" status" required> -->
+        <input type="text" value="<%= menu.remarks%>" name="remarks" id="remarks" placeholder="remarks" required>
+        <!-- <textarea title="message"   name="remark" placeholder="your Here" required></textarea> -->
+
+        <button type="submit" value="Submit">edit</button>
+
+
+
+      </form>
+    </div>
+        <style>
+    .fcontainer{
+      /* background-color: rgb(4, 47, 65); */
+      background-color: rgb(42, 97, 97);
+     box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+     padding: 2em;
+     width: 500px;
+     min-height: 50vh;
+     border-radius: 3px;
+    margin: 50px;
+     margin: auto;
+     margin-top: 5em;
+     margin-bottom: 3em;
+     color: rgb(15, 54, 54);
+     }
+   
+     .fcontainer h2{
+         text-align: center;
+         color: #fff;
+     }
+   
+     .fcontainer .layout{
+     border-radius: 8px;
+     margin: auto;
+     color: #fff;
+    
+   }
+   .layout p{
+     text-align: center;
+   }
+   .fcontainer input{
+     width: 90%;
+    padding: 0.8rem;
+    border: 2px solid rgb(171, 184, 173);
+    /* color: white; */
+    margin: 0.6em;
+    border-radius: 5px;
+    /* border: none; */
+    
+   
+   }
+   .fcontainer input:focus{
+     outline: none;
+   }
+   
+   textarea{
+     width: 90%;
+     min-height: 30vh;
+    padding: 0.8rem;
+    /* outline: none; */
+    /* color: white; */
+    margin: 0.6em;
+    border-radius:  5px;
+    border: 2px solid rgb(148, 156, 149);
+    /* border: none; */
+    
+   
+   }
+   .button3{
+     border: none;
+     background-color: rgb(26, 73, 78);
+     text-align: center;
+     padding: 0.6em;
+     margin: 0.4em;
+     margin-bottom: 2em;
+     border-radius: 7px; 
+     color: #fff; 
+     margin-left: 15em; 
+   }
+   </style>
+   

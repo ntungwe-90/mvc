@@ -7,9 +7,9 @@ exports.index = async(req, res) =>{
  res.render("comments/index", {title:"comment", comment})
 }
 
-// exports.add = async(req, res) =>{
-//     res.render("comments/add",{title:" add comment"})
-// }
+exports.add = async(req, res) =>{
+    res.render("comments/add",{title:" add comment"})
+}
 
 exports.save = async(req, res) =>{
     const comment =new Comment({
@@ -24,6 +24,17 @@ exports.save = async(req, res) =>{
 
 exports.edit=async(req, res) => {
   let id = req.params.id;
-  const comment = await Comment.findById(id)
-  res.render("comments/edit", {comment})
+  const comment = await Comment.findById(id);
+  res.render("comments/edit", {comment});
+};
+
+exports.update = async (req,res) =>{
+	let id = req.params.id
+	const comment = await Comment.updateOne({_id:id},{
+		name: req.body.name,
+		email: req.body.email,
+		comment: req.body.comment,
+	})
+	res.redirect("/aboutUS")
 }
+

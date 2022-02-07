@@ -23,8 +23,8 @@ app.use('/',route)
 const menuRoute = require('./server/routes/menuRoutes')
 app.use('/menus', menuRoute)
 
-// const commentRoute = require('./server/routes/commentRoutes')
-// app.use('/comments', commentRoute)
+ const commentRoute = require('./server/routes/commentRoutes')
+app.use('/comments', commentRoute)
 
 
 app.listen(PORT, ()=>console.log(`running`))

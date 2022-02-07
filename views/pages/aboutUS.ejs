@@ -60,6 +60,16 @@
       <p>email:<%- comment.email -%> </p>
       <p>comment:<%- comment.comment -%> </p>
 
+      <div class="dropdown">
+                    <button class="dropbtn">
+                      <i class="bi bi-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/comments/edit/<%=comment._id %>">Edit Comment</a>
+                  </div>
+
+            </div>
+
     <% }) %> 
    <% } %> 
 

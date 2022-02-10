@@ -8,18 +8,18 @@ exports.index = async(req, res) =>{
 }
 
 exports.add = async(req, res) =>{
-    res.render("comments/add",{title:" add comment"})
+    res.render("comments/add")
 }
 
 exports.save = async(req, res) =>{
     const comment =new Comment({
        name:req.body.name,
        email:req.body.email,
-       comment:req.body.comment 
+       message:req.body.message 
     })
     console.log(comment)
     await comment.save()
-    res.redirect("/aboutUS")
+    res.redirect("/feedback")
 }
 
 exports.edit=async(req, res) => {
@@ -33,8 +33,18 @@ exports.update = async (req,res) =>{
 	const comment = await Comment.updateOne({_id:id},{
 		name: req.body.name,
 		email: req.body.email,
-		comment: req.body.comment,
+		message: req.body.message,
 	})
 	res.redirect("/aboutUS")
+}
+
+exports.getdelete =async(req,res) =>{
+  res.render("comments/delete",{title:"delete"})
+}
+
+exports.delete = async(req,res)=>{
+let id = req.params.menu_id 
+  const comment =await Comment.deleteOne({_id:id})
+  res.redirect(301,"/comments")
 }
 

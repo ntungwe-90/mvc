@@ -1,26 +1,26 @@
-<div class="menu">
-    <div class="menu-header">
-        <p class="menu_head">OUR MENU </p>
+<div class="ordercontainer">
+    <div class="allorders">
+        <p class="mainheader">OUR MENU </p>
     
-    <div class="list_menu">
-        <div class="menu_data">
+    <div>
+        <div>
                 <% if (typeof menus != 'undefined'){  %> 
                     <%	menus.forEach((menu) =>{ %>
-                    <div id="card_menu">
-                <p class="menu_item"> Menu : <%-menu.name %></p>
-                <p class="menu_item">Price : <%- menu.price %></p>
-                <p class="menu_item">Status : <%-menu.status %></p>
-                <p class="menu_item">remarks : <%-menu.remarks %></p>
+                    <div >
+                <p > Menu : <%-menu.name %></p>
+                <p >Price : <%- menu.price %></p>
+                <p >Status : <%-menu.status %></p>
+                <p >remarks : <%-menu.remarks %></p>
          
                 <div class="dropdown">
                     <button class="dropbtn">
                       <i class="bi bi-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="/menus/add"  class="menu_link" >Add</a>
-                <a href="/menus/edit/<%=menu._id %>"   class="menu_link" style="color: green;" >Edit</a>
-                <a href="/menus/delete/<%=menu._id %>"  class="menu_link" style="color: red;">Delete</a> 
-                <a href="/orders/add/<%=menu._id %>"  class="menu_link" style="color: blue;">Order</a>
+                        <a href="/menus/add"   >Add</a>
+                <a href="/menus/edit/<%=menu._id %>"    style="color: green;" >Edit</a>
+                <a href="/menus/delete/<%=menu._id %>"   style="color: red;">Delete</a> 
+                <a href="/orders/add/<%=menu._id %>"   style="color: blue;">Order</a>
                   </div>
 
             </div>

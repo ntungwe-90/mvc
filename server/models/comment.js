@@ -8,7 +8,8 @@ const schema = new mongoose.Schema({
  email:{
      type:String
  },
- comment:{
+ 
+ message:{
      type:String
  }
 })

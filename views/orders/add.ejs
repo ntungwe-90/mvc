@@ -1,0 +1,96 @@
+<div class="fcontainer">
+    <h2 > order menu</h2>
+    
+    <form method="post" id="for-input">
+        <label>client name</label>
+        <input type="text" name="client " id="client" placeholder="name"> <br><br>
+    
+        <label>price</label>
+        <input type="hidden" name="price" value="<%=menu.price %>" id="price" placeholder="price"><br><br>
+    
+        <label>status</label>
+        <input type="hidden" name="status" value="<%= menu.status %> " id="status" placeholder="status"><br><br>
+    
+        
+        <button class="button3" type="Submit">Add</button>
+    </form>
+    </div>
+    
+    <style>
+    
+    
+    .fcontainer{
+       /* background-color: rgb(4, 47, 65); */
+       background-color: rgb(42, 97, 97);
+      box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+      opacity: 0.9;
+      padding: 2em;
+      width: 500px;
+      min-height: 50vh;
+      border-radius: 3px;
+     margin: 50px;
+      margin: auto;
+      margin-top: 5em;
+      margin-bottom: 3em;
+      color: rgb(15, 54, 54);
+      }
+    
+      .fcontainer h2{
+          text-align: center;
+          color: #fff;
+      }
+    
+      .fcontainer .layout{
+      border-radius: 8px;
+      margin: auto;
+      color: #fff;
+     
+    }
+    .layout p{
+      text-align: center;
+    }
+    .fcontainer input{
+      width: 90%;
+     padding: 0.8rem;
+     border: 2px solid rgb(171, 184, 173);
+     /* color: white; */
+     margin: 0.6em;
+     border-radius: 5px;
+     /* border: none; */
+     
+    
+    }
+    .fcontainer input:focus{
+      outline: none;
+    }
+    
+    textarea{
+      width: 90%;
+      min-height: 30vh;
+     padding: 0.8rem;
+     /* outline: none; */
+     /* color: white; */
+     margin: 0.6em;
+     border-radius:  5px;
+     border: 2px solid rgb(148, 156, 149);
+     /* border: none; */
+     
+    
+    }
+    .button3{
+      border: none;
+      background-color: rgb(26, 73, 78);
+      text-align: center;
+      padding: 0.6em;
+      margin: 0.4em;
+      margin-bottom: 2em;
+      border-radius: 7px; 
+      color: #fff; 
+      margin-left: 15em; 
+    }
+    </style>
+    
+    
+    
+    
+    

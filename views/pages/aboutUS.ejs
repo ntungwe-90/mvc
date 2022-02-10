@@ -49,38 +49,75 @@
     </div>
   </div>
 
-  <div class="newfeedback">
-    <h2> Feedbacks From Our Customers</h2>
-  </div>
-
-  <div class="commentContainer">
-    <% if(typeof comments !="undefined"){ %>
-     <% comments.forEach((comment) =>{ %>
-      <p>name:<%- comment.name -%> </p>
-      <p>email:<%- comment.email -%> </p>
-      <p>comment:<%- comment.comment -%> </p>
-
-      <div class="dropdown">
-                    <button class="dropbtn">
-                      <i class="bi bi-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/comments/edit/<%=comment._id %>">Edit Comment</a>
-                  </div>
-
-            </div>
-
-    <% }) %> 
-   <% } %> 
-
+  <h2 id="feedbk">FEEDBACK FROM OUR CUSTOMERS</h2>
   
-  </div>
+    <div class="customer-feedbacks">
+            <% if (typeof comments != 'undefined'){  %> 
+        <%	comments.forEach((comment) =>{ %>
+                <div class="card">
+            <h4 class="name" >Full Name : <%-comment.name %></h4>
+            <h4 class="email" >Email Address : <%-comment.email %></h4>
+            <h4 class="message" >Comment: <%-comment.message %></h4>
+           
+                    <a style="color: blue;" href="/comments/edit/<%=comment._id %>">Edit </a>
+                    <a style="color: red;" href="/comments/delete/<%=comment._id %>">Delete </a>
+             
+
+        <!-- </div> -->
+                </div>
+            <% }) %>
+            <%}%>
+    
+    </div>
+
 
 <style>
-  .commentContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
+
+  #feedbk{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
+.card{
+    /* background-color:rgb(29, 208, 231) ; */
+   background-color: rgb(128, 128, 128);
+height: 150px;
+width: 300px;
+text-align: center;
+border-radius: 5px;
+color: #fff;
+/* margin-left: 5rem;     */
+
+  
+}
+.card:hover{
+    background-color: lightgray;
+   
+}
+.customer-feedbacks{
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr ;
+ /* grid-template-columns: repeat(auto-fit, minmax(300px, 300px)); */
+ grid-gap: 50px;
+ /* margin-left:2rem ; */
+ padding-left: 2rem;
+}
+
+.name{
+    margin-top: 50px;
+   
+}
+.email{
+  margin-bottom: 10px;
+ 
+}
+.message{
+    margin-top: -15px;
+   
+}
+
+
+.customer-feedbacks a{
+   margin-left: 10px;
+}
 </style>

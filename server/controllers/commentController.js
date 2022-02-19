@@ -39,12 +39,14 @@ exports.update = async (req,res) =>{
 }
 
 exports.getdelete =async(req,res) =>{
-  res.render("comments/delete",{title:"delete"})
+  res.render("comments/delete")
 }
 
 exports.delete = async(req,res)=>{
-let id = req.params.menu_id 
+let id = req.params.comment_id 
   const comment =await Comment.deleteOne({_id:id})
-  res.redirect(301,"/comments")
+  res.redirect("/succesdelete")
 }
+
+
 

@@ -1,11 +1,11 @@
-
+<div style="background-image: url(/img/last.jpg);">
     <div class="fcontainer">
       <h3>Edit menu</h3>
       <form class="layout" action="" method="post">
         <!-- <input type="hidden" id="_id" name="_id" placeholder="status" required> -->
         <input type="text" value="<%= menu.name %>" name="name" id="name" placeholder=" name" required>
         <input type="number" value="<%= menu.price%>" name="price" id="price" placeholder=" price" required>
-        <!-- <input type="number" value="<%= menu.status%>" name="status" class="name" placeholder=" status" required> -->
+         <input type="number" value="<%= menu.status%>" name="status" class="name" placeholder=" status" required> 
         <input type="text" value="<%= menu.remarks%>" name="remarks" id="remarks" placeholder="remarks" required>
         <!-- <textarea title="message"   name="remark" placeholder="your Here" required></textarea> -->
 
@@ -15,23 +15,25 @@
 
       </form>
     </div>
+  </div>
         <style>
     .fcontainer{
       /* background-color: rgb(4, 47, 65); */
-      background-color: rgb(42, 97, 97);
-     box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+      /* background-color: rgb(42, 97, 97); */
+    
+     box-shadow: 2px 3px 2px 3px #fff;
      padding: 2em;
      width: 500px;
      min-height: 50vh;
      border-radius: 3px;
     margin: 50px;
      margin: auto;
-     margin-top: 5em;
+     margin-top: 8em;
      margin-bottom: 3em;
      color: rgb(15, 54, 54);
      }
    
-     .fcontainer h2{
+     .fcontainer h3{
          text-align: center;
          color: #fff;
      }
@@ -51,7 +53,7 @@
     border: 2px solid rgb(171, 184, 173);
     /* color: white; */
     margin: 0.6em;
-    border-radius: 5px;
+    border-radius: 15px;
     /* border: none; */
     
    

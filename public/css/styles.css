@@ -853,7 +853,7 @@ margin-bottom: 5px;
 /* contactUS page */
 .contactcontainer{
   background-color: rgb(4, 47, 65);
-    box-shadow: 2px 3px 2px 3px rgb(15, 54, 54);
+    box-shadow: 2px 3px 2px 3px white;
     color: white;
     padding: 2em;
     width: 500px;

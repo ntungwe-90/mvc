@@ -1,47 +1,89 @@
+<div style="background-image:url(/img/mixed.jpg);">
 <div class="ordercontainer">
     <div class="allorders">
-        <p class="mainheader">OUR MENU </p>
-    
-    <div>
-        <div>
-                <% if (typeof menus != 'undefined'){  %> 
-                    <%	menus.forEach((menu) =>{ %>
-                    <div >
-                <p > Menu : <%-menu.name %></p>
-                <p >Price : <%- menu.price %></p>
-                <p >Status : <%-menu.status %></p>
-                <p >remarks : <%-menu.remarks %></p>
-         
-                <div class="dropdown">
+        <p class="heading" style="color: #fff;">OUR MENU </p>
+
+        <div class="customer-feedbacks">
+            <!-- <div> -->
+            <% if (typeof menus !='undefined' ){ %>
+                <% menus.forEach((menu)=>{ %>
+                    <div class="card">
+                        <p class="name"> Menu : <%-menu.name %>
+                        </p>
+                        <p>Price : <%- menu.price %>
+                        </p>
+                        <p>Status : <%-menu.status %>
+                        </p>
+                        <p>remarks : <%-menu.remarks %>
+                        </p>
+
+                        <!-- <div class="dropdown">
                     <button class="dropbtn">
                       <i class="bi bi-caret-down"></i>
                     </button>
-                    <div class="dropdown-content">
-                        <a href="/menus/add"   >Add</a>
-                <a href="/menus/edit/<%=menu._id %>"    style="color: green;" >Edit</a>
-                <a href="/menus/delete/<%=menu._id %>"   style="color: red;">Delete</a> 
-                <a href="/orders/add/<%=menu._id %>"   style="color: blue;">Order</a>
-                  </div>
-
-            </div>
+                    <div class="dropdown-content"> -->
+                        <a href="/menus/add">Add</a>
+                        <a href="/menus/edit/<%=menu._id %>" style="color: green;">Edit</a>
+                        <a href="/menus/delete/<%=menu._id %>" style="color: red;">Delete</a>
+                        <a href="/orders/add/<%=menu._id %>" style="color: blue;">Order</a>
                     </div>
-           
-                <% }) %>
-                <%}%>
-            </div>
-        </div>
+
+                    <!-- </div> -->
+                    <!-- </div> -->
+
+                    <% }) %>
+                        <%}%>
         </div>
     </div>
+</div>
+</div>
 
 
 
 
 
-    <style>
-.menu{
-    color: black;
-}
-        h1{
-            color: black;
-        }
-    </style>
+<style>
+    .heading{
+        text-align: center;
+        margin-bottom: 3em;
+        font-size: 25px;
+    }
+    .ordercontainer {
+        margin-top: 6em;
+        margin-bottom: 4em;
+    }
+
+    .card {
+        background-image: url("/img/last.jpg");
+        /* background-color:rgb(29, 208, 231) ; */
+        /* background-color: rgb(128, 128, 128); */
+        height: 100px;
+        width: 200px;
+        text-align: center;
+        border-radius: 5px;
+        color: #fff;
+
+        /* margin-left: 5rem;     */
+
+
+    }
+
+    .card:hover {
+        background-color: lightgray;
+
+    }
+
+    .customer-feedbacks {
+        display: grid;
+        grid-template-columns: 1fr  1fr 1fr 1fr;
+        /* grid-template-columns: repeat(auto-fit, minmax(300px, 300px)); */
+        grid-gap: 25px;
+        /* margin-left:2rem ; */
+        padding-left: 2rem;
+    }
+
+    .name {
+        margin-top: 150px;
+
+    }
+</style>

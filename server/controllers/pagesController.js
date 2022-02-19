@@ -18,3 +18,7 @@ exports.contactUS = async(req,res) =>{
 exports.feedback =async (req,res)=>{
     res.render("pages/feedback",{title:"Feedback"})
 }
+
+exports.succesdelete =async (req,res)=>{
+    res.render("pages/succesdelete")
+}

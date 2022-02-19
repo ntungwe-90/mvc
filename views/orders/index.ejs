@@ -8,18 +8,19 @@
           <% if (typeof orders != 'undefined'){  %> 
           <% orders.forEach((order)=>{ %>
             <div id="card">
+                <img src="../../img/beef.jpg" alt="food image">
                 <p class="abt_cm">Order Summary</p>
-        <p class="abt_cm"> Customer Name : <%- order.client %></p>
+        <p class="abt_cm"> Client Name : <%- order.client %></p>
         <p class="abt_cm">Menu Ordered : <%- order.menu.name %> </p>
-        <p class="abt_cm">Total Cost : <%- order.cost %> Ghana Cedis</p>
+        <p class="abt_cm">Total Cost : <%- order.cost %> </p>
             <p class="abt_cm"> Date of Order : <%- order.date %></p>
             <div class="dropdown">
                 <button class="dropbtn">
                   <i class="bi bi-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a style="color: green;" href="/orders/edit/<%=order._id %>" >edit order</a>
-                    <a href="/orders/delete/<%=order._id %>">delete order</a>
+                    <a style="color: green;" href="/orders/edit/<%=order._id %>" >edit </a>
+                    <a href="/orders/delete/<%=order._id %>">delete </a>
                  </div>
               </div>
 
@@ -32,23 +33,13 @@
         </div>
     </div>
 
-<h1 class="order_head">SOCIAL CONTENT   </h1>
 
-
-<div class="order_container">
-   
-    <img  class ="order_img" src="../../img/beef.jpg" alt="food image">
-    <img  class ="order_img" src="../../img/bg21.jpg" alt="food image">  
-     <img  class ="order_img" src="../../img/beef.jpg" alt="food image">
-
-   
-</div>
 </div>
 
 <style>
 
-.abttt{
-    margin-top: 5em;}
+/* .abttt{
+    margin-top: 5em;} */
     .order_img{
     width :20em;
     height: 13em;
@@ -63,13 +54,13 @@
 .order_head{
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    /* margin-top: 1em; */
     margin-bottom: 1em;
     font-weight: bold;
     
 }
 .order-data{
-    margin-top: 10em;
+     margin-top: 5em; 
     margin-left: 2em;
 }
 .order_btn{
@@ -146,5 +137,10 @@ margin-top: 3em;
     
     margin-left: 30em;
     margin-top: 2em;
+}
+
+#card img{
+    height: 80px;
+    width: 80px;
 }
 </style>

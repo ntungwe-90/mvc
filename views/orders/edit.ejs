@@ -1,0 +1,75 @@
+<div style="background-image: url(/img/bg21.jpg);" >
+    <div class="fcontainer">
+        <form method="Post">
+
+            <h2>Edit order</h2>
+            <label> client Name :
+                <input type="text" id="client" name="client" value="<%= order.client %>" placeholder="enter your name">
+            </label>
+
+            <br>
+            <label> Menu :
+                <select class="select" name="menu" required>
+                    <option value="<%= order.menu._id %>">
+                        <%= order.menu.name %>
+                    </option>
+                    <% if (typeof menus !='undefined' ){ %>
+                        <% menus.forEach((menu)=> { %>
+                            <option value="<%= menu._id %>">
+                                <%= menu.name %>
+                            </option>
+                            <% }) %>
+                                <%} %>
+
+                </select>
+            </label>
+            <br>
+            <button class="buttons" type="submit" value="Submit">submit</button>
+
+        </form>
+    </div>
+</div>
+
+
+<style>
+    .fcontainer {
+        margin-top: 7em;
+        box-shadow: 2px 3px 2px 3px black;
+        opacity: 0.9;
+        padding: 2em;
+        width: 500px;
+        min-height: 50vh;
+        border-radius: 3px;
+        margin: 50px;
+        margin: auto;
+        margin-top: 5em;
+        margin-bottom: 7em;
+        color: #fff;
+    }
+
+    .fcontainer input {
+        width: 90%;
+        padding: 0.8rem;
+        border: 2px solid black;
+        /* color: white; */
+        margin: 0.6em;
+        border-radius: 5px;
+        /* border: none; */
+
+
+    }
+
+    .fcontainer input:focus {
+        outline: none;
+    }
+
+    .fcontainer select {
+        width: 90%;
+        padding: 0.8rem;
+        border: 2px solid black;
+        /* color: white; */
+        margin: 0.6em;
+        border-radius: 5px;
+        /* border: none; */
+    }
+</style>
